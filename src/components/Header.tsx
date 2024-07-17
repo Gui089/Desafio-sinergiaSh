@@ -28,7 +28,7 @@ const Header = () => {
 
     return (
         <div className="flex justify-between pt-6 px-5 xl:ml-[15%]">
-            <h1 className="text-red-600 font-bold">Sinergia Foods</h1>
+            <h1 className="text-red-600 font-bold">Genêsis Cardápios</h1>
 
 
             <ul className="hidden md:hidden lg:flex">
