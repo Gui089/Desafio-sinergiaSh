@@ -21,7 +21,7 @@ const menuItemList = [
 
 export const MenuBarMobile = () => {
     return (
-        <div className="absolute bg-black right-2 w-[80%] h-[130%] sm:hidden">
+        <div className="absolute bg-black right-2 w-[80%] h-[80%] sm:hidden md:flex md:h-[50%]">
             <ul className="flex flex-col mt-5 items-start ml-[85px]">
                 {menuItemList.map(item => 
                     <li className="text-gray-200 font-semibold mt-5 flex items-center" key={item.title}>
@@ -30,7 +30,7 @@ export const MenuBarMobile = () => {
                     </li>)}
             </ul>
 
-            <button className="flex ml-[85px] mt-[200px] bg-red-600 hover:bg-red-800 p-2 w-[160px] rounded-sm items-center justify-center ">
+            <button className="flex ml-[85px] mt-[200px] bg-red-600 hover:bg-red-800 p-2 w-[160px] rounded-sm items-center justify-center md:absolute md:bottom-[100px]">
                 <img width={25} src="/img/shopping-cart.png" className="mr-1" />
                 <h1 className="text-white">Carrinho</h1>
             </button>

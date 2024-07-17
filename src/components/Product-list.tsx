@@ -85,7 +85,7 @@ const juices = [
 
 export const ProductList = () => {
   return (
-    <div className="flex overflow-x-auto gap-4 scrollbar-hide">
+    <div className="flex overflow-x-auto gap-4 scrollbar-hide xl:ml-[20%] lg:ml-[5%]">
       {products.map((product) => (
         <ProductItem
           key={product.title}
@@ -101,7 +101,7 @@ export const ProductList = () => {
 
 export const ProductJuices =() => {
     return (
-        <div className="flex overflow-x-auto gap-4 scrollbar-hide">
+        <div className="flex overflow-x-auto gap-4 scrollbar-hide xl:ml-[20%] lg:ml-[5%]">
       {juices.map((juice) => (
         <ProductItem
           key={juice.title}

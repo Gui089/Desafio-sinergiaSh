@@ -16,8 +16,8 @@ function App() {
 
        <CategoryList />
 
-       <div className="flex md:flex-row md:justify-around sm:flex flex-col">
-            <div className="bg-red-600 lg:h-[170px] mt-5 w-[350px] h-[150px] ml-8 rounded-md flex justify-between ">
+       <div className="flex gap-4 items-center md:flex-row md:justify-center sm:flex flex-col lg:gap-10">
+            <div className="bg-red-600 lg:h-[170px] mt-5 w-[350px] h-[150px] rounded-md flex justify-between">
 
             <div className=" flex flex-col mt-3 items-center ml-3 h-[90px]">
                 <p className="text-white ">até</p>
@@ -40,7 +40,7 @@ function App() {
 
           </div>
 
-          <div className="bg-[#FFB100] lg:h-[170px] mt-5 w-[350px] h-[150px] ml-8 rounded-md flex justify-between ">
+          <div className="bg-[#FFB100] lg:h-[170px] mt-5 w-[350px] h-[150px] rounded-md flex justify-between ">
 
             <div className=" flex flex-col mt-6 ml-4 items-center h-[90px]">
                 <p className="text-white ">a partir de </p>
@@ -64,7 +64,7 @@ function App() {
        </div>
 
 
-      <div className="pt-5">
+      <div className="pt-5 xl:ml-[20%] lg:ml-[5%]">
         <div className="px-5">
           <h2 className="text-xl text-gray-300 font-semibold">Pratos Principais</h2>
         </div>
@@ -74,13 +74,13 @@ function App() {
         <ProductList />
       </div>
 
-      <div className="pt-5">
+      <div className="pt-5 xl:ml-[20%] lg:ml-[5%]">
         <div className="px-5">
           <h2 className="text-xl text-gray-300 font-semibold">Sucos e Bebidas</h2>
         </div>
       </div>
 
-      <div className="pt-6 mt-[-20px] pb-[40px]">
+      <div className="pt-6 mt-[-20px] pb-[100px]">
         <ProductJuices />
       </div>
     </>
