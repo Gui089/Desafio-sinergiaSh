@@ -21,7 +21,7 @@ const menuItemList = [
 
 export const MenuBarMobile = () => {
     return (
-        <div className="absolute bg-black right-2 w-[80%] h-[130%]">
+        <div className="absolute bg-black right-2 w-[80%] h-[130%] sm:hidden">
             <ul className="flex flex-col mt-5 items-start ml-[85px]">
                 {menuItemList.map(item => 
                     <li className="text-gray-200 font-semibold mt-5 flex items-center" key={item.title}>
