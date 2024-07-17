@@ -23,8 +23,6 @@ const categoryList = [
     }
 ];
 
-const color =' #9A9A9A';
-
 const CategoryList = () => {
     return (
         <div className="flex overflow-x-scroll [&::-webkit-scrollbar]:hidden md:justify-center">
