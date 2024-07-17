@@ -14,7 +14,7 @@ const categoryList = [
         icon:"/img/coffee-cup.png",
     },
     {
-        title:"Restaurantes",
+        title:"Porções",
         icon:"/img/restauran.png"
     }
 ];
@@ -22,7 +22,7 @@ const categoryList = [
 
 const CategoryList = () => {
     return (
-        <div className="flex overflow-x-scroll">
+        <div className="flex overflow-x-scroll [&::-webkit-scrollbar]:hidden md:justify-center">
             {categoryList.map(item => 
                 <CategoryItem icon={item.icon} title={item.title}  />
             )}
