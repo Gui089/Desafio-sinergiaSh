@@ -2,23 +2,28 @@ import CategoryItem from "./Category-item";
 
 const categoryList = [
     {
-        title: "Destaques",
-        icon:"/img/star.png",
+        title:"Lanches",
+        icon:"/img/burger (1).png",
     },
     {
-        title:"Pratos",
-        icon:"/img/restaurant.png",
+        title:"Bolos",
+        icon:"/img/cake.png",
     },
     {
-        title: "Bebidas",
-        icon:"/img/coffee-cup.png",
+        title: "Pizzas",
+        icon:"/img/pizza.png",
     },
     {
-        title:"Porções",
-        icon:"/img/restauran.png"
+        title:"Chás",
+        icon:"/img/coffee-cup (3).png"
+    },
+    {
+        title:"Sucos",
+        icon:"/img/orange-juice.png"
     }
 ];
 
+const color =' #9A9A9A';
 
 const CategoryList = () => {
     return (
