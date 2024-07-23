@@ -1,49 +1,8 @@
+import { useEffect, useState } from "react";
 import ProductItem from "./Product-item";
+import { ProductsTypeApi } from "../domain/products/products-types";
+import { GetProducts } from "../domain/products/product-api";
 
-const products = [
-  {
-    title: "Frango ao Molho",
-    imageUrl: "/img/frango-molho.png",
-    restaurant: "Bandejão cidade",
-    category: "Pratos",
-    price: "25",
-  },
-  {
-    title: "Camarão Citrus",
-    imageUrl: "/img/camarao.png",
-    restaurant: "Japonês",
-    category: "Porções",
-    price: "30",
-  },
-  {
-    title: "Picanha Suprema",
-    imageUrl: "/img/picanha.png",
-    restaurant: "Bandejão cidade",
-    category: "Pratos",
-    price: "45",
-  },
-  {
-    title: "Ramen Clássico",
-    imageUrl: "/img/ramen.png",
-    restaurant: "Japonês",
-    category: "Pratos",
-    price: "35",
-  },
-  {
-    title: "Combo hot hol",
-    imageUrl: "/img/hot-hol.png",
-    restaurant: "Japonês",
-    category: "Combos",
-    price: "65",
-  },
-  {
-    title: "Tempura verde",
-    imageUrl: "/img/tempero.png",
-    restaurant: "Japonês",
-    category: "Pratos",
-    price: "38",
-  },
-];
 
 const juices = [
     {
@@ -84,14 +43,26 @@ const juices = [
 ]
 
 export const ProductList = () => {
+
+  const [products, setProducts] = useState<ProductsTypeApi []>([]);
+
+  const getProducts = async () => {
+      const product = await GetProducts();
+
+      setProducts(product.products);
+  }
+  useEffect(() => {
+    getProducts();
+  }, []);
+
   return (
     <div className="flex overflow-x-auto gap-4 scrollbar-hide xl:ml-[20%] lg:ml-[5%]">
       {products.map((product) => (
         <ProductItem
-          key={product.title}
+          key={product.id}
           title={product.title}
           restaurant={product.restaurant}
-          imageUrl={product.imageUrl}
+          imageUrl={product.image_url}
           price={product.price}
         />
       ))}

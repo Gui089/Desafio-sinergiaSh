@@ -1,3 +1,6 @@
+import { useEffect, useState } from "react";
+import { CategoryTypes } from "../domain/categories/categories-types";
+import { getCategoriesApi } from "../domain/categories/categories-api";
 import CategoryItem from "./Category-item";
 
 const categoryList = [
@@ -24,10 +27,26 @@ const categoryList = [
 ];
 
 const CategoryList = () => {
+    
+    const [category, setCategory] = useState<CategoryTypes []>([]);
+
+    const getCategories = async () => {
+        const categories = await getCategoriesApi();
+
+        setCategory(categories.categories);
+    }
+
+    useEffect(() => {
+        getCategories();
+    }, []);
+
+    console.log(category);
+    
+
     return (
         <div className="flex overflow-x-scroll [&::-webkit-scrollbar]:hidden md:justify-center">
-            {categoryList.map(item => 
-                <CategoryItem icon={item.icon} title={item.title}  />
+            {category.map(item => 
+                <CategoryItem iconName={item.icon_name} key={item.id} title={item.title}  />
             )}
         </div>
     )

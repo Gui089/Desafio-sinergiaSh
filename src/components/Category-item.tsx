@@ -1,18 +1,19 @@
 
+import { Icon } from './icon/Icon';
+
+
 interface CategoryProps {
-    icon: string;
-    title: string;
+  title: string;
+  iconName: string;
 }
 
-const CategoryItem = ({icon, title}: CategoryProps) => {
-    return (
-        <div className="flex cursor-pointer h-[45px] items-center justify-center gap-2 mr-3 mt-5 px-8 border-[1px] border-gray-600 rounded-full md:w-[120px]">
-            <img src={icon} alt={title} height={25} width={25}/>
-
-            <span className="font-semibold text-gray-400">{title}</span>
-        </div>
-    )
-}
-
+const CategoryItem = ({ title, iconName }: CategoryProps) => {
+  return (
+    <div className="flex cursor-pointer h-[45px] items-center justify-center gap-2 mr-3 mt-5 px-8 border-[1px] border-gray-600 rounded-full">
+      <Icon name={iconName} color='#EEEE'/>
+      <span className="font-semibold text-gray-400">{title}</span>
+    </div>
+  );
+};
 
 export default CategoryItem;
